@@ -105,20 +105,20 @@ is_predator(X).
 
     // Разширена база знания с животни и правила
     const knowledge = `
-      animal(lion).
-animal(elephant).
-animal(tiger).
+      car(mercedes).
+car(bmw).
+car(audi).
 
 % Козина (бозайници)
-mammal(lion).
+mammal(mercedes).
 
 
 % Големи животни
-big(elephant).
+big(bmw).
 
 % Хищници
 
-predator(tiger).
+predator(audi).
 
 % Правила
 is_mammal(X) :- mammal(X).
@@ -130,12 +130,9 @@ is_predator(X) :- predator(X).
     session.consult(knowledge);
 
     const animalAnimations = {
-      lion: '<img src="https://images.ecency.com/p/FUkUE5bzkAZT3HzV5tJDiU2ik81PCd4JCyhWnRcDN8XJsVFY3UNB8DCcF6FBnrG9mHUsoB7296D4omrF75j3S9mNdXjzd7j2xiKroEuvcf5umt9qDsRKoeDp3kBezDQscLbJuZaCqh8sgthRd5GukLgMiH16xWrcxhxh.png?format=match&mode=fit" class="animal-gif" alt="Лъв анимация" />',
-      elephant: '<img src="https://media.giphy.com/media/2v170e71aanfi/giphy.gif" class="animal-gif" alt="Слон анимация" />',
-      tiger: '<img src="https://media.giphy.com/media/fANhQpcPGr2hO/giphy.gif" class="animal-gif" alt="Тигър анимация" />',
-      crocodile: '<img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" class="animal-gif" alt="Крокодил анимация" />',
-      kangaroo: '<img src="https://media.giphy.com/media/l0MYEw7nYdf6r62aI/giphy.gif" class="animal-gif" alt="Кенгуру анимация" />',
-      owl: '<img src="https://media.giphy.com/media/3ohs4B9Zz54HXGvoYs/giphy.gif" class="animal-gif" alt="Бухал анимация" />'
+      mercedes: '<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3VzeXBwcWhuY3ZmNW5nZzN4dW0zOTB3cWZyMGU3YXZmMHR2dXJueiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l1Et5bgKvIRTDjHxu/giphy.gif" class="animal-gif" alt="Лъв анимация" />',
+      bmw: '<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2dvOGVoZmpvcndvZXM4dDlueXA2ZXhuODZ0MmVwNGEydnh1azJ0eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WZYdVW49TRf0s/giphy.gif" class="animal-gif" alt="Слон анимация" />',
+      audi: '<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGpmeG45bHpidnI5eWU3bDN4ZTV6cTJpaDc1bzV2NnY0bmxtcWtvOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l46CwlES1UnwgqsaQ/giphy.gif" class="animal-gif" alt="Тигър анимация" />',
     };
 
     function runProlog() {
