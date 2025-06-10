@@ -87,32 +87,15 @@ is_predator(X).
 
     // Разширена база знания с животни и правила
     const knowledge = `
-      animal(lion).
-animal(elephant).
-animal(tiger).
-
-% Козина (бозайници)
-mammal(lion).
-
-
-% Големи животни
-big(elephant).
-
-% Хищници
-
-predator(tiger).
-
-% Правила
-is_mammal(X) :- mammal(X).
-is_big(X) :- big(X).
-is_predator(X) :- predator(X).
-
+      car(tesla).
+car(lada).
+electric_car(X):-car(X).
     `;
 
     session.consult(knowledge);
 
     const animalAnimations = {
-      mercedes: '<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHozcGFpcWZ4N29qamJtZ3g2ejZ1azVpeDhmb2lhYXRrOGM2cjdlayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ljGfAhpsZ17ws/giphy.gif" alt="Mercedes" />',
+      tesla: '<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHozcGFpcWZ4N29qamJtZ3g2ejZ1azVpeDhmb2lhYXRrOGM2cjdlayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ljGfAhpsZ17ws/giphy.gif" alt="Mercedes" />',
       bmw: '<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnhjdG9yNmx0Njl2MHVsOHVtZ2U4aXp1ODcyNHd6bmZkbDYyMW1yOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/124NH7ohOmpWak/giphy.gif" alt="Bmw" />',
       audi: '<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmczMXd1bnN5dzZ4N29kYWFhZjhiMjBnajlxc2Z2em0yMDFnZmJzeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6gHc1RjkqM4Z9oiY/giphy.gif" alt="Audi" />',
       ford: '<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2d1YjR0YzZ1dTRwOGNzbWpjdXRpc2N6bjduNGs4OGptdHdmMHJoayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CcoXLPkt7EbrW/giphy.gif" alt="Ford" />',
